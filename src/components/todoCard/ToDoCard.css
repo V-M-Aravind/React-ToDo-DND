@@ -1,0 +1,29 @@
+.card-container {
+  display: flex;
+  background-color: rgb(172, 172, 74);
+  width: 400px;
+  justify-content: space-between;
+  height: 100px;
+  padding: 1em;
+  margin: 1em 0.5em;
+}
+.content {
+  width: 70%;
+}
+.todo-icons {
+  width: 20%;
+  transition: 0.5s;
+}
+.todo-icons span {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+.todo-icons span:hover {
+  cursor: pointer;
+}
+.edit-form {
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+}
