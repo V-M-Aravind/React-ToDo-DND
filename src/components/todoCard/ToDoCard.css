@@ -1,22 +1,25 @@
 .card-container {
   display: flex;
   background-color: rgb(172, 172, 74);
-  width: 400px;
-  justify-content: space-between;
+  width: 95%;
+  justify-content: space-around;
   height: 100px;
-  padding: 1em;
+  padding: 1em 0 1em 0.4em;
   margin: 1em 0.5em;
 }
 .content {
-  width: 70%;
+  width: 75%;
+  flex: 1;
 }
 .todo-icons {
   width: 20%;
   transition: 0.5s;
+  padding-right: 0.2em;
+  text-align: end;
 }
 .todo-icons span {
   margin-left: 0.2em;
-  margin-right: 0.2em;
+  margin-right: 0.1em;
 }
 .todo-icons span:hover {
   cursor: pointer;

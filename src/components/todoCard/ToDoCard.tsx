@@ -30,7 +30,6 @@ function ToDoCard({
       inputRef.current?.focus();
     }
   }, [isEdit]);
-  const renderingText = toDo.isCompleted ? <s>{toDo.toDo}</s> : toDo.toDo;
   const editForm = (
     <form onSubmit={submitHandler}>
       <input
@@ -46,7 +45,7 @@ function ToDoCard({
   );
   return (
     <div className='card-container'>
-      <div className='content'>{isEdit ? editForm : renderingText}</div>
+      <span className='content'>{isEdit ? editForm : toDo.toDo}</span>
       <div className='todo-icons'>
         {!toDo.isCompleted && (
           <span>

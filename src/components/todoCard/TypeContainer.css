@@ -1,0 +1,19 @@
+.type-container {
+  display: flex;
+  flex-direction: column;
+  background-color: beige;
+  width: 45%;
+  margin: 0.5em auto;
+  min-height: 300px;
+  justify-content: flex-start;
+}
+.type-container h2 {
+  text-align: center;
+  color: black;
+  margin-top: 1em;
+  padding-top: 0;
+}
+.children {
+  margin: 0 auto;
+  width: 95%;
+}
