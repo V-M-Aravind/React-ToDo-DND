@@ -1,11 +1,17 @@
 .type-container {
   display: flex;
   flex-direction: column;
-  background-color: beige;
+
   width: 45%;
   margin: 0.5em auto;
   min-height: 300px;
   justify-content: flex-start;
+}
+.normal-bg {
+  background-color: rgb(93, 177, 250);
+}
+.highlight {
+  background-color: rgb(176, 214, 247);
 }
 .type-container h2 {
   text-align: center;

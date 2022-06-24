@@ -1,15 +1,22 @@
 .card-container {
   display: flex;
-  background-color: rgb(172, 172, 74);
-  width: 95%;
+  background-color: #fff3f3;
+  width: 85%;
   justify-content: space-around;
   height: 100px;
-  padding: 1em 0 1em 0.4em;
-  margin: 1em 0.5em;
+  padding: 1.2em;
+  margin: 1em auto;
+  border: 1px solid black;
+  border-radius: 21px;
+  color: #000;
+  font-weight: 600;
+  align-items: center;
+  position: relative;
 }
 .content {
   width: 75%;
   flex: 1;
+  cursor: default;
 }
 .todo-icons {
   width: 20%;
