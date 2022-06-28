@@ -1,6 +1,6 @@
 .card-container {
   display: flex;
-  background-color: #fff3f3;
+  background-color: #cef0ff;
   width: 85%;
   justify-content: space-around;
   height: 100px;
@@ -11,7 +11,7 @@
   color: #000;
   font-weight: 600;
   align-items: center;
-  position: relative;
+  /* position: relative; */
 }
 .content {
   width: 75%;

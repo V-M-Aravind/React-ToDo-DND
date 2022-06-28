@@ -1,6 +1,9 @@
 .header-container {
   text-align: center;
 }
+.header-container h1 {
+  color: rgb(20, 71, 116);
+}
 .form-newtodo {
   margin: 3em auto;
   text-align: center;
@@ -49,4 +52,20 @@
   flex-wrap: wrap;
   padding: 1em 2em;
   align-items: flex-start;
+}
+
+@media screen and (max-width: 1076px) {
+  .todo-icons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .todos-container {
+    flex-direction: column;
+  }
+  .type-container {
+    width: 100%;
+  }
 }

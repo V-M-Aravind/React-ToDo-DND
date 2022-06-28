@@ -1,11 +1,11 @@
 .type-container {
   display: flex;
   flex-direction: column;
-
   width: 45%;
   margin: 0.5em auto;
   min-height: 300px;
   justify-content: flex-start;
+  border-radius: 2em;
 }
 .normal-bg {
   background-color: rgb(93, 177, 250);
