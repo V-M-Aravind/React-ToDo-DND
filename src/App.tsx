@@ -16,6 +16,13 @@ function App(): JSX.Element {
     }
     return [];
   });
+  const [filterText, setFilterText] = useState<string>('');
+  const searchHandler = (): ToDo[] => {
+    if (filterText.length === 0) return toDos;
+    return toDos.filter((toDo) =>
+      toDo.toDo.toLowerCase().includes(filterText.toLowerCase())
+    );
+  };
   useEffect(() => {
     localStorage.setItem('TaskiFy', JSON.stringify(toDos));
   }, [toDos]);
@@ -65,12 +72,12 @@ function App(): JSX.Element {
   };
   return (
     <>
-      <Header />
+      <Header filteredText={filterText} setFilteredText={setFilterText} />
       <NewToDo setToDos={setToDos} />
       <div className='todos-container'>
         <DndProvider backend={HTML5Backend}>
           <TypeContainer title='ToDos' onDrop={onDrop}>
-            {toDos.map((toDo, index) =>
+            {searchHandler().map((toDo, index) =>
               toDo.isCompleted ? (
                 ''
               ) : (
@@ -87,7 +94,7 @@ function App(): JSX.Element {
             )}
           </TypeContainer>
           <TypeContainer title='Completed' onDrop={onDrop}>
-            {toDos.map((toDo, index) =>
+            {searchHandler().map((toDo, index) =>
               toDo.isCompleted ? (
                 <ToDoCard
                   key={toDo.id}

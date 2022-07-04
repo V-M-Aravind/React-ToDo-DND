@@ -1,8 +1,12 @@
 .header-container {
   text-align: center;
+  display: flex;
+  max-width: 1000px;
+  margin: 1em auto;
 }
 .header-container h1 {
   color: rgb(20, 71, 116);
+  margin-left: 40%;
 }
 .form-newtodo {
   margin: 3em auto;
@@ -10,6 +14,7 @@
   align-items: center;
   position: relative;
   width: 80%;
+  max-width: 1000px;
 }
 .form-newtodo input {
   width: 100%;
@@ -49,23 +54,27 @@
   display: flex;
   justify-content: space-around;
   margin: 1em auto;
-  flex-wrap: wrap;
   padding: 1em 2em;
   align-items: flex-start;
+  max-width: 1300px;
 }
 
-@media screen and (max-width: 1076px) {
+@media only screen and (max-width: 1076px) {
   .todo-icons {
     display: flex;
     flex-direction: column;
   }
 }
 
-@media screen and (max-width: 780px) {
-  .todos-container {
+@media only screen and (max-width: 796px) {
+  .header-container {
+    text-align: center;
     flex-direction: column;
+    justify-items: center;
+    align-items: center;
   }
-  .type-container {
-    width: 100%;
+  .header-container h1 {
+    margin-left: auto;
+    margin-right: auto;
   }
 }

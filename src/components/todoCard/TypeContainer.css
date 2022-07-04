@@ -23,3 +23,12 @@
   margin: 0 auto;
   width: 95%;
 }
+
+@media only screen and (max-width: 780px) {
+  .todos-container {
+    flex-direction: column;
+  }
+  .type-container {
+    width: 100%;
+  }
+}

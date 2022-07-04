@@ -8,7 +8,9 @@ Also has the facility to drag and drop using react drag and drop library
 
 Can sort the todo by draging it in its own conatiner
 
-Use local storage to store data
+Uses local storage to store data
+
+Search toDo
 
 <br>
 
@@ -34,8 +36,7 @@ Use local storage to store data
 
 ## Project Status
 
-This project is currently in development.
-Functionality to search todo is in progress.
+This project is completed
 
 <br>
 
@@ -108,5 +109,31 @@ todo content => edit, mark as complete and delete button
 <br>
 
 ![Completed todo](assets/taskify-completed-todo.PNG)
+
+<br>
+
+### Search todo
+
+#### Search todo initial
+
+<br>
+
+![Search todo](assets/taskify-searchToDo-initial.PNG)
+
+<br>
+
+#### Search todo results
+
+<br>
+
+![Search todo result](assets/taskify-searchToDo-result.PNG)
+
+<br>
+
+### Responsive smaller display
+
+<br>
+
+![Responsive display](assets/taskify-responsive.PNG)
 
 <br>
