@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { DndProvider, DropTargetMonitor } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import './App.css';
@@ -9,7 +9,16 @@ import ToDoCard from './components/todoCard/ToDoCard';
 import TypeContainer from './components/todoCard/TypeContainer';
 
 function App(): JSX.Element {
-  const [toDos, setToDos] = useState<ToDo[]>([]);
+  const [toDos, setToDos] = useState<ToDo[]>((): ToDo[] => {
+    const items = localStorage.getItem('TaskiFy');
+    if (items) {
+      return JSON.parse(items);
+    }
+    return [];
+  });
+  useEffect(() => {
+    localStorage.setItem('TaskiFy', JSON.stringify(toDos));
+  }, [toDos]);
   const editToDoHandler = (id: number, editedToDo: string) => {
     setToDos((p) =>
       p.map((todo) =>

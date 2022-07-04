@@ -8,6 +8,8 @@ Also has the facility to drag and drop using react drag and drop library
 
 Can sort the todo by draging it in its own conatiner
 
+Use local storage to store data
+
 <br>
 
 ---
@@ -33,7 +35,7 @@ Can sort the todo by draging it in its own conatiner
 ## Project Status
 
 This project is currently in development.
-Functionality to save the todo in local storage is in progress.
+Functionality to search todo is in progress.
 
 <br>
 
