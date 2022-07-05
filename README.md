@@ -27,6 +27,8 @@ Search toDo
 | React DND               | 16.0.1  |
 | React dnd html5 backend | 16.0.1  |
 | Typescript              |  4.7.4  |
+| MUI                     |  5.8.6  |
+| MUI Icons               |  5.8.4  |
 
 <br>
 

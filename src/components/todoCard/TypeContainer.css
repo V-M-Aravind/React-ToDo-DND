@@ -6,6 +6,7 @@
   min-height: 300px;
   justify-content: flex-start;
   border-radius: 2em;
+  color: #000;
 }
 .normal-bg {
   background-color: rgb(93, 177, 250);

@@ -23,6 +23,21 @@ function App(): JSX.Element {
       toDo.toDo.toLowerCase().includes(filterText.toLowerCase())
     );
   };
+  const toDoData = (toDo: ToDo, index: number, flag: boolean): any => {
+    if (toDo.isCompleted === flag) {
+      return (
+        <ToDoCard
+          key={toDo.id}
+          toDo={toDo}
+          deleteToDoHandler={deleteToDoHandler}
+          completeToDoHandler={completeToDoHandler}
+          editToDoHandler={editToDoHandler}
+          index={index}
+          sortHandler={sortHandler}
+        />
+      );
+    } else return '';
+  };
   useEffect(() => {
     localStorage.setItem('TaskiFy', JSON.stringify(toDos));
   }, [toDos]);
@@ -77,38 +92,10 @@ function App(): JSX.Element {
       <div className='todos-container'>
         <DndProvider backend={HTML5Backend}>
           <TypeContainer title='ToDos' onDrop={onDrop}>
-            {searchHandler().map((toDo, index) =>
-              toDo.isCompleted ? (
-                ''
-              ) : (
-                <ToDoCard
-                  key={toDo.id}
-                  toDo={toDo}
-                  deleteToDoHandler={deleteToDoHandler}
-                  completeToDoHandler={completeToDoHandler}
-                  editToDoHandler={editToDoHandler}
-                  index={index}
-                  sortHandler={sortHandler}
-                />
-              )
-            )}
+            {searchHandler().map((toDo, index) => toDoData(toDo, index, false))}
           </TypeContainer>
           <TypeContainer title='Completed' onDrop={onDrop}>
-            {searchHandler().map((toDo, index) =>
-              toDo.isCompleted ? (
-                <ToDoCard
-                  key={toDo.id}
-                  toDo={toDo}
-                  deleteToDoHandler={deleteToDoHandler}
-                  completeToDoHandler={completeToDoHandler}
-                  editToDoHandler={editToDoHandler}
-                  index={index}
-                  sortHandler={sortHandler}
-                />
-              ) : (
-                ''
-              )
-            )}
+            {searchHandler().map((toDo, index) => toDoData(toDo, index, true))}
           </TypeContainer>
         </DndProvider>
       </div>
